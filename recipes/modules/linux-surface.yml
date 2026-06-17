@@ -1,0 +1,26 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
+
+modules:
+  - type: dnf
+    repos:
+      files:
+        - https://pkg.surfacelinux.com/fedora/linux-surface.repo
+    install:
+      allow-erasing: true
+      skip-unavailable: true
+      packages:
+        - kernel-surface
+        - kernel-surface-devel # In case something else needs to build kernel modules
+        - iptsd
+        - libwacom-surface
+        - libcamera
+        - libcamera-tools
+        - libcamera-gstreamer
+        - libcamera-ipa
+        - pipewire-plugin-libcamera
+
+  - type: systemd
+    system:
+      enabled:
+        - linux-surface-default-watchdog.path # Should ensure the surface kernel is selected above a more recent standard kernel (which is available as fallback)
