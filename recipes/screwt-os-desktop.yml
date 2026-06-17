@@ -32,6 +32,8 @@ modules:
         - tmux
         - nextcloud-client
 
+  - from-file: modules/nix.yml
+
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
