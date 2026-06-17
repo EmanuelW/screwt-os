@@ -38,4 +38,6 @@ modules:
       enabled:
         - podman.socket # U-Blue template does this by default. Investigate if it is needed
 
+  - type: initramfs # Should be needed for surface kernel to be loaded by initramfs
+
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
