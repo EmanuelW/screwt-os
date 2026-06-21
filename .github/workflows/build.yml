@@ -27,6 +27,7 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
+          - screwt-os-basic.yml
           - screwt-os-desktop.yml
           - screwt-os-surface.yml
     steps:
