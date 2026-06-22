@@ -29,6 +29,7 @@ jobs:
           # !! Add your recipes here
           - screwt-os-basic.yml
           - screwt-os-desktop.yml
+          - screwt-os-cosmic.yml
           - screwt-os-surface.yml
     steps:
       # the build is fully handled by the reusable github action
