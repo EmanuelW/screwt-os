@@ -5,15 +5,16 @@ modules:
   - type: dnf
     repos:
       files:
-        - https://pkg.surfacelinux.com/fedora/linux-surface.repo
+        # - https://pkg.surfacelinux.com/fedora/linux-surface.repo
+        - linux-surface.repo # Workaround from https://github.com/linux-surface/linux-surface/issues/2094
     install:
       allow-erasing: true
-      skip-unavailable: true
+      # skip-unavailable: true
       packages:
         - kernel-surface
         - kernel-surface-devel # In case something else needs to build kernel modules
         - iptsd
-        - libwacom-surface
+        # - libwacom-surface This is currently in conflict until the f43 -> f44 transition is complete https://github.com/L0g0ff/KompassOS/issues/79
         - libcamera
         - libcamera-tools
         - libcamera-gstreamer
