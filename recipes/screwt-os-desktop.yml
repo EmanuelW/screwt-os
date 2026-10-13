@@ -38,6 +38,7 @@ modules:
         - tmux
         - nextcloud-client
         - ramalama
+        - https://github.com/lemonade-sdk/lemonade/releases/download/v2026.41.1/lemonade-server-2026.41.1-fc44.x86_64.rpm
 
   - from-file: modules/nix.yml
 
